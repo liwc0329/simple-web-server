@@ -1,0 +1,58 @@
+
+HTTP协议:超文本传输协议
+是浏览器与服务器之间传输通讯的协议。
+
+浏览器向服务器发送:请求
+服务器向浏览器发送:响应
+
+而请求与响应在HTTP中都用标准的协议格式。
+浏览器与服务器遵循该格式，并互相进行通讯。
+
+
+HTTP请求的格式:
+HTTP请求由三部分组成:请求行，消息头，消息正文
+请求行格式: 
+Method Request-URI HTTP-Version CRLF
+例如:
+GET /index.html HTTP/1.1 CRLF
+CR:回车  LF:换行
+
+消息头格式:
+name:value CRLF
+例如:
+
+CRLF(消息头每一项信息后面都会有CRLF,当消息头所
+         信息发送完毕后，会单独发送一个CRLF。)
+
+消息正文:
+实际随请求发送过来的数据(POST请求用，GET请求该项为空)         
+
+
+
+
+
+
+HTTP响应的格式:
+响应包含三部分:状态行，响应头，响应正文
+
+状态行的格式:
+HTTP-Version Status-Code Reason-PhraseCRLF
+   协议版本             状态值           状态描述
+例如:
+HTTP/1.1 200 OKCRLF
+
+响应头格式:
+name:value
+例如:
+Content-Type:text/htmlCRLF
+Content-Length:35CRLF
+CRLF
+所有响应头信息完毕后也会单独发送一个CRLF
+
+响应正文为服务端实际回应客户端的资源数据
+
+
+
+
+
+
